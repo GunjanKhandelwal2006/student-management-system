@@ -1,0 +1,27 @@
+# NetBeans build outputs
+**/build/
+**/dist/
+**/nbproject/private/
+**/.nb-cache/
+
+# Compiled Java class files
+*.class
+
+# Backup and temp files
+*~
+*.bak
+*.swp
+*.tmp
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE metadata
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath

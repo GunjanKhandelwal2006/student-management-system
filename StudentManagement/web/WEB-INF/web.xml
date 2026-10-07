@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    
+    <display-name>StudentManagement</display-name>
+
+    <!-- 1. Student List & Dashboard Servlet -->
+    <servlet>
+        <servlet-name>StudentListServlet</servlet-name>
+        <servlet-class>servlet.StudentListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentListServlet</servlet-name>
+        <url-pattern>/students</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StudentListServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <!-- 2. Add Student Servlet -->
+    <servlet>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <servlet-class>servlet.AddStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <url-pattern>/add-student</url-pattern>
+    </servlet-mapping>
+
+    <!-- 3. Edit / Update Student Servlet -->
+    <servlet>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <servlet-class>servlet.UpdateStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <url-pattern>/edit-student</url-pattern>
+    </servlet-mapping>
+
+    <!-- 4. Delete Student Servlet -->
+    <servlet>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <servlet-class>servlet.DeleteStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <url-pattern>/delete-student</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+</web-app>
